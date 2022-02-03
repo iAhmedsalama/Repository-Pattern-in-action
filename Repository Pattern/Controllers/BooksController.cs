@@ -37,7 +37,7 @@ namespace RepositoryPattern.Controllers
         [HttpGet("GetAllWithAuthors")]
         public async Task<IActionResult> GetAllWithAuthors()
         {
-            return Ok(await _booksRepository.FindAllAsync(b => b.Title == "Book2", new[] { "Author" }));
+            return Ok(await _booksRepository.FindAllAsync(b => b.Title.Contains("Book") , new[] { "Author" }));
         }
     }
 }

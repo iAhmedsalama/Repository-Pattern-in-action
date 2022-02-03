@@ -52,5 +52,10 @@ namespace RepositoryPattern.EF.Repositories
 
             return query.Where(match).ToList();
         }
+
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int take, int skip)
+        {
+            return _context.Set<T>().Where(match).Skip(skip).Take(take).ToList();
+        }
     }
 }

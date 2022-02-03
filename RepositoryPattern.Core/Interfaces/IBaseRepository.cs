@@ -17,5 +17,6 @@ namespace RepositoryPattern.Core.Interfaces
         Task<T> FindAsync(Expression<Func<T, bool>> match, string[] includes = null);
 
         Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, string[] includes = null);
+        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int take, int skip);
     }
 }
