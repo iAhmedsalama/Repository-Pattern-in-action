@@ -1,0 +1,27 @@
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\appsettings.Development.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\appsettings.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Repository Pattern.exe
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Repository Pattern.deps.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Repository Pattern.runtimeconfig.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Repository Pattern.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\ref\Repository Pattern.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Repository Pattern.pdb
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.csproj.AssemblyReference.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.AssemblyInfoInputs.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.AssemblyInfo.cs
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.csproj.CoreCompileInputs.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.MvcApplicationPartsAssemblyInfo.cs
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.MvcApplicationPartsAssemblyInfo.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\staticwebassets.build.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\staticwebassets.development.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\scopedcss\bundle\Repository Pattern.styles.css
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.csproj.CopyComplete
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\ref\Repository Pattern.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.pdb
+E:\Programming\7.Repos\DevCreed\Repository Pattern\Repository Pattern\obj\Debug\net6.0\Repository Pattern.genruntimeconfig.cache

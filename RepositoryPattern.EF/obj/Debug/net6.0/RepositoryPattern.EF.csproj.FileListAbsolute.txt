@@ -1,0 +1,17 @@
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\RepositoryPattern.EF.deps.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\RepositoryPattern.EF.runtimeconfig.json
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\RepositoryPattern.EF.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\ref\RepositoryPattern.EF.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\RepositoryPattern.EF.pdb
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.csproj.AssemblyReference.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.AssemblyInfoInputs.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.AssemblyInfo.cs
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.csproj.CoreCompileInputs.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\ref\RepositoryPattern.EF.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.pdb
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.genruntimeconfig.cache
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\RepositoryPattern.Core.dll
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\bin\Debug\net6.0\RepositoryPattern.Core.pdb
+E:\Programming\7.Repos\DevCreed\Repository Pattern\RepositoryPattern.EF\obj\Debug\net6.0\RepositoryPattern.EF.csproj.CopyComplete
