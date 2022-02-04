@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RepositoryPattern.Core.Consts;
 using RepositoryPattern.Core.Interfaces;
 using RepositoryPattern.Core.Models;
 
@@ -38,6 +39,18 @@ namespace RepositoryPattern.Controllers
         public async Task<IActionResult> GetAllWithAuthors()
         {
             return Ok(await _booksRepository.FindAllAsync(b => b.Title.Contains("Book") , new[] { "Author" }));
+        }
+
+        [HttpGet("GetOrdered")]
+        public async Task<IActionResult> GetOrdered()
+        {
+            return Ok(await _booksRepository.FindAllAsync(b => b.Title.Contains("Book"), null, null, b=>b.Id, OrderBy.Descending));
+        }
+
+        [HttpPost("AddBook")]
+        public async Task<IActionResult> AddBook()
+        {
+            return Ok(await _booksRepository.Add(new Book { Title="Book4", AuthorId= 2}));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RepositoryPattern.Core.Consts;
 using RepositoryPattern.Core.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -57,5 +58,44 @@ namespace RepositoryPattern.EF.Repositories
         {
             return _context.Set<T>().Where(match).Skip(skip).Take(take).ToList();
         }
+
+        
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int? take, int? skip,
+            Expression<Func<T, object>> orderBy = null, string orderByDirection = OrderBy.Ascending)
+        {
+            IQueryable<T> query = _context.Set<T>().Where(match);
+
+            if (take.HasValue)
+                query = query.Take(take.Value);
+
+            if (skip.HasValue)
+                query = query.Skip(skip.Value);
+
+            if (orderBy != null)
+            {
+                if(orderByDirection == OrderBy.Ascending)
+                    query = query.OrderBy(orderBy);
+                else
+                    query = query.OrderByDescending(orderBy);
+            }
+            return await query.ToListAsync();
+        }
+
+        public async Task<T> Add(T entity)
+        {
+            await _context.Set<T>().AddAsync(entity);
+            _context.SaveChanges();
+
+            return entity;
+        }
+
+        public async Task<IEnumerable<T>> AddRange(IEnumerable<T> entities)
+        {
+            await _context.Set<T>().AddRangeAsync(entities);
+            _context.SaveChanges();
+
+            return entities;
+        }
+
     }
 }
