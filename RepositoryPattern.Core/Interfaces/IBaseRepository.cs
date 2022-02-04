@@ -27,5 +27,17 @@ namespace RepositoryPattern.Core.Interfaces
         Task<T> Add(T entity);
 
         Task<IEnumerable<T>> AddRange(IEnumerable<T> entities);
+
+        Task<T> Update(T entity);
+
+        void Delete(T entity);
+
+        void DeleteRange(IEnumerable<T> entities);
+
+        void Attach(T entity);
+
+        Task<int> Count();
+
+        Task<int> Count(Expression<Func<T, bool>> criteria);
     }
 }

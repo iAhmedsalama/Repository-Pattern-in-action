@@ -84,7 +84,6 @@ namespace RepositoryPattern.EF.Repositories
         public async Task<T> Add(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
-            _context.SaveChanges();
 
             return entity;
         }
@@ -92,10 +91,36 @@ namespace RepositoryPattern.EF.Repositories
         public async Task<IEnumerable<T>> AddRange(IEnumerable<T> entities)
         {
             await _context.Set<T>().AddRangeAsync(entities);
-            _context.SaveChanges();
 
             return entities;
         }
 
+        public async Task<T> Update(T entity)
+        {
+            _context.Update(entity);
+            return entity;
+        }
+        public void Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
+        public void DeleteRange(IEnumerable<T> entities)
+        {
+            _context.Set<T>().RemoveRange(entities);
+        }
+        public void Attach(T entity)
+        {
+            _context.Set<T>().Attach(entity);
+        }
+        public async Task<int> Count()
+        {
+            return await _context.Set<T>().CountAsync();
+        }
+        public async Task<int> Count(Expression<Func<T, bool>> criteria)
+        {
+            return await _context.Set<T>().CountAsync(criteria);
+        }
+
+       
     }
 }

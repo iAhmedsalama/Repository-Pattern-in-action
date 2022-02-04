@@ -51,7 +51,12 @@ namespace RepositoryPattern.Controllers
         [HttpPost("AddBook")]
         public async Task<IActionResult> AddBook()
         {
-            return Ok(await _unitOfWork.Books.Add(new Book { Title="Book4", AuthorId= 2}));
+            var book = await _unitOfWork.Books.Add(new Book { Title = "Book5", AuthorId = 2 });
+            _unitOfWork.Complete();
+
+            return Ok(book);
         }
+
+        
     }
 }
