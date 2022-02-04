@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RepositoryPattern.Core;
 using RepositoryPattern.Core.Consts;
 using RepositoryPattern.Core.Interfaces;
 using RepositoryPattern.Core.Models;
@@ -10,47 +11,47 @@ namespace RepositoryPattern.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly IBaseRepository<Book> _booksRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public BooksController(IBaseRepository<Book> booksRepository)
+        public BooksController(IUnitOfWork unitOfWork)
         {
-            _booksRepository = booksRepository;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
         public IActionResult GetById()
         {
-            return Ok(_booksRepository.GetById(3));
+            return Ok(_unitOfWork.Books.GetById(3));
         }
 
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
         {
-            return Ok(await _booksRepository.GetAllAsync());
+            return Ok(await _unitOfWork.Books.GetAllAsync());
         }
 
         [HttpGet("GetByName")]
         public async Task<IActionResult> GetByName()
         {
-            return Ok(await _booksRepository.FindAsync(b=>b.Title =="Book1", new [] {"Author"}));
+            return Ok(await _unitOfWork.Books.FindAsync(b=>b.Title =="Book1", new [] {"Author"}));
         }
 
         [HttpGet("GetAllWithAuthors")]
         public async Task<IActionResult> GetAllWithAuthors()
         {
-            return Ok(await _booksRepository.FindAllAsync(b => b.Title.Contains("Book") , new[] { "Author" }));
+            return Ok(await _unitOfWork.Books.FindAllAsync(b => b.Title.Contains("Book") , new[] { "Author" }));
         }
 
         [HttpGet("GetOrdered")]
         public async Task<IActionResult> GetOrdered()
         {
-            return Ok(await _booksRepository.FindAllAsync(b => b.Title.Contains("Book"), null, null, b=>b.Id, OrderBy.Descending));
+            return Ok(await _unitOfWork.Books.FindAllAsync(b => b.Title.Contains("Book"), null, null, b=>b.Id, OrderBy.Descending));
         }
 
         [HttpPost("AddBook")]
         public async Task<IActionResult> AddBook()
         {
-            return Ok(await _booksRepository.Add(new Book { Title="Book4", AuthorId= 2}));
+            return Ok(await _unitOfWork.Books.Add(new Book { Title="Book4", AuthorId= 2}));
         }
     }
 }

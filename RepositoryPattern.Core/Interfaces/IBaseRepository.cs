@@ -15,13 +15,13 @@ namespace RepositoryPattern.Core.Interfaces
 
         Task<IEnumerable<T>> GetAllAsync();
 
-        Task<T> FindAsync(Expression<Func<T, bool>> match, string[] includes = null);
+        Task<T> FindAsync(Expression<Func<T, bool>> criteria, string[] includes = null);
 
-        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, string[] includes = null);
+        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> criteria, string[] includes = null);
 
-        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int take, int skip);
+        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> criteria, int take, int skip);
 
-        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int? take, int? skip,
+        Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> criteria, int? take, int? skip,
             Expression<Func<T, object>> orderBy = null, string orderByDirection = OrderBy.Ascending);
 
         Task<T> Add(T entity);

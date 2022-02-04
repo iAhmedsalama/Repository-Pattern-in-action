@@ -32,7 +32,7 @@ namespace RepositoryPattern.EF.Repositories
 
 
 
-        public async Task<T> FindAsync(Expression<Func<T, bool>> match, string[] includes = null)
+        public async Task<T> FindAsync(Expression<Func<T, bool>> criteria, string[] includes = null)
         {
             IQueryable<T> query = _context.Set<T>();
             if (includes != null)
@@ -40,10 +40,10 @@ namespace RepositoryPattern.EF.Repositories
                 foreach (var include in includes)
                     query = query.Include(include);
 
-            return await query.SingleOrDefaultAsync(match);
+            return await query.SingleOrDefaultAsync(criteria);
         }
 
-        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, string[] includes = null)
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> criteria, string[] includes = null)
         {
             IQueryable<T> query = _context.Set<T>();
             if (includes != null)
@@ -51,19 +51,19 @@ namespace RepositoryPattern.EF.Repositories
                 foreach (var include in includes)
                     query = query.Include(include);
 
-            return query.Where(match).ToList();
+            return query.Where(criteria).ToList();
         }
 
-        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int take, int skip)
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> criteria, int take, int skip)
         {
-            return _context.Set<T>().Where(match).Skip(skip).Take(take).ToList();
+            return _context.Set<T>().Where(criteria).Skip(skip).Take(take).ToList();
         }
 
         
-        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match, int? take, int? skip,
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> criteria, int? take, int? skip,
             Expression<Func<T, object>> orderBy = null, string orderByDirection = OrderBy.Ascending)
         {
-            IQueryable<T> query = _context.Set<T>().Where(match);
+            IQueryable<T> query = _context.Set<T>().Where(criteria);
 
             if (take.HasValue)
                 query = query.Take(take.Value);
